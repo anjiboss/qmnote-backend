@@ -30,7 +30,21 @@ model Profile {
   // Relations
   user      User     @relation(fields: [userId], references: [id])
   userId    String   @unique
+  notes     Note[]
   //--
 }
 
 // !SECTION
+
+model Note {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  // title will be unique for now
+  title     String   @unique
+  content   String
+  // Relations
+  user      Profile  @relation(fields: [userId], references: [id])
+  userId    String
+  //--
+}
