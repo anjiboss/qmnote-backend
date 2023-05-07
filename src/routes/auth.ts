@@ -208,7 +208,7 @@ router.post("/token/refresh", async (req, res) => {
 // !SECTION
 
 // SECTION LogOut
-router.post("/token/logout", async (req, res) => {
+router.get("/token/logout", async (req, res) => {
     //check if the req.headers["authorization"] exist
     if (!req.headers["authorization"]) {
         return responser(res, HttpStatusCode.BAD_REQUEST, "Error : Missing Authorization Header provided!");
