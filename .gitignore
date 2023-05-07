@@ -1,0 +1,14 @@
+node_modules
+dist
+
+# Editor directories and files
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Locks
+package-lock.json
+yarn.lock
